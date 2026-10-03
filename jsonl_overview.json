@@ -1,0 +1,4250 @@
+{
+  "j1": {
+    "txt": {
+      "1": {
+        "i": {
+          "cam": {
+            "_topic_occurrences": 11234,
+            "_topic": "/j1/txt/1/i/cam",
+            "_summary": {
+              "message_count": 11234,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "data": {
+                    "_type": "string"
+                  },
+                  "ts": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.574086+00:00",
+              "last_message": "2026-06-10T09:40:21.548707+00:00",
+              "observation_duration_seconds": 6950.974621,
+              "message_interval_seconds": {
+                "minimum": 0.000317,
+                "maximum": 573.898936,
+                "average": 0.618799,
+                "median": 0.520175
+              },
+              "payload_timestamp_fields": "ts"
+            }
+          },
+          "bme680": {
+            "_topic_occurrences": 104,
+            "_topic": "/j1/txt/1/i/bme680",
+            "_summary": {
+              "message_count": 104,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "aq": {
+                    "_type": "number"
+                  },
+                  "gr": {
+                    "_type": "number"
+                  },
+                  "h": {
+                    "_type": "number"
+                  },
+                  "iaq": {
+                    "_type": "number"
+                  },
+                  "p": {
+                    "_type": "number"
+                  },
+                  "rh": {
+                    "_type": "number"
+                  },
+                  "rt": {
+                    "_type": "number"
+                  },
+                  "t": {
+                    "_type": "number"
+                  },
+                  "ts": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.325748+00:00",
+              "last_message": "2026-06-10T09:39:31.548378+00:00",
+              "observation_duration_seconds": 6901.22263,
+              "message_interval_seconds": {
+                "minimum": 0.456389,
+                "maximum": 601.389414,
+                "average": 67.002161,
+                "median": 60.438924
+              },
+              "payload_timestamp_fields": "ts"
+            }
+          },
+          "ldr": {
+            "_topic_occurrences": 103,
+            "_topic": "/j1/txt/1/i/ldr",
+            "_summary": {
+              "message_count": 103,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "br": {
+                    "_type": "number"
+                  },
+                  "ldr": {
+                    "_type": "number"
+                  },
+                  "ts": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.325479+00:00",
+              "last_message": "2026-06-10T09:39:39.938835+00:00",
+              "observation_duration_seconds": 6909.613356,
+              "message_interval_seconds": {
+                "minimum": 3.491913,
+                "maximum": 631.446985,
+                "average": 67.741307,
+                "median": 60.0575155
+              },
+              "payload_timestamp_fields": "ts"
+            }
+          },
+          "broadcast": {
+            "_topic_occurrences": 6,
+            "_topic": "/j1/txt/1/i/broadcast",
+            "_summary": {
+              "message_count": 6,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "hardwareId": {
+                    "_type": "string"
+                  },
+                  "hardwareModel": {
+                    "_type": "string"
+                  },
+                  "message": {
+                    "_type": "string"
+                  },
+                  "softwareName": {
+                    "_type": "string"
+                  },
+                  "softwareVersion": {
+                    "_type": "string"
+                  },
+                  "ts": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.325623+00:00",
+              "last_message": "2026-06-10T09:13:49.283785+00:00",
+              "observation_duration_seconds": 5358.958162,
+              "message_interval_seconds": {
+                "minimum": 707.931293,
+                "maximum": 1415.49549,
+                "average": 1071.791632,
+                "median": 1120.978809
+              },
+              "payload_timestamp_fields": "ts"
+            }
+          },
+          "_topic_occurrences": 11447
+        },
+        "f": {
+          "i": {
+            "order": {
+              "_topic_occurrences": 613,
+              "_topic": "/j1/txt/1/f/i/order",
+              "_summary": {
+                "message_count": 613,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "state": {
+                      "_type": "string"
+                    },
+                    "ts": {
+                      "_type": "string"
+                    },
+                    "type": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "payload.type",
+                "first_message": "2026-06-10T07:44:30.325358+00:00",
+                "last_message": "2026-06-10T09:37:40.772963+00:00",
+                "observation_duration_seconds": 6790.447605,
+                "message_interval_seconds": {
+                  "minimum": 0.000129,
+                  "maximum": 661.414489,
+                  "average": 11.095503,
+                  "median": 8.367213
+                },
+                "payload_timestamp_fields": "ts"
+              }
+            },
+            "stock": {
+              "_topic_occurrences": 239,
+              "_topic": "/j1/txt/1/f/i/stock",
+              "_summary": {
+                "message_count": 239,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "stockItems": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "hbw": {
+                          "_type": "string"
+                        },
+                        "location": {
+                          "_type": "string"
+                        },
+                        "workpiece": {
+                          "_type": "object",
+                          "id": {
+                            "_type": "string"
+                          },
+                          "state": {
+                            "_type": "string"
+                          },
+                          "type": {
+                            "_type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "ts": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "payload.stockItems[].workpiece.type",
+                "first_message": "2026-06-10T07:44:30.325165+00:00",
+                "last_message": "2026-06-10T09:36:27.461737+00:00",
+                "observation_duration_seconds": 6717.136572,
+                "message_interval_seconds": {
+                  "minimum": 0.000232,
+                  "maximum": 676.060777,
+                  "average": 28.223263,
+                  "median": 14.6420605
+                },
+                "payload_timestamp_fields": "ts"
+              }
+            },
+            "config": {
+              "hbw": {
+                "_topic_occurrences": 6,
+                "_topic": "/j1/txt/1/f/i/config/hbw",
+                "_summary": {
+                  "message_count": 6,
+                  "payload_shape": "object",
+                  "payload_structure": {
+                    "payload": {
+                      "_type": "object",
+                      "ts": {
+                        "_type": "string"
+                      },
+                      "warehouses": {
+                        "_type": "array"
+                      }
+                    }
+                  },
+                  "classification_fields": "none observed",
+                  "first_message": "2026-06-10T07:44:30.325032+00:00",
+                  "last_message": "2026-06-10T09:13:49.283539+00:00",
+                  "observation_duration_seconds": 5358.958507,
+                  "message_interval_seconds": {
+                    "minimum": 707.931283,
+                    "maximum": 1415.495373,
+                    "average": 1071.791701,
+                    "median": 1120.978835
+                  },
+                  "payload_timestamp_fields": "ts"
+                }
+              },
+              "_topic_occurrences": 6
+            },
+            "_topic_occurrences": 858
+          },
+          "o": {
+            "order": {
+              "_topic_occurrences": 31,
+              "_topic": "/j1/txt/1/f/o/order",
+              "_summary": {
+                "message_count": 31,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "ts": {
+                      "_type": "string"
+                    },
+                    "type": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "payload.type",
+                "first_message": "2026-06-10T07:46:06.431674+00:00",
+                "last_message": "2026-06-10T09:34:42.769128+00:00",
+                "observation_duration_seconds": 6516.337454,
+                "message_interval_seconds": {
+                  "minimum": 59.03468,
+                  "maximum": 857.786937,
+                  "average": 217.211248,
+                  "median": 162.641725
+                },
+                "payload_timestamp_fields": "ts"
+              }
+            },
+            "_topic_occurrences": 31
+          },
+          "_topic_occurrences": 889
+        },
+        "_topic_occurrences": 12336
+      },
+      "_topic_occurrences": 12336
+    },
+    "_topic_occurrences": 12336
+  },
+  "module": {
+    "v1": {
+      "ff": {
+        "SVR4H92774": {
+          "instantAction": {
+            "_topic_occurrences": 5296,
+            "_topic": "module/v1/ff/SVR4H92774/instantAction",
+            "_summary": {
+              "message_count": 5296,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actions": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "actionId": {
+                        "_type": "string"
+                      },
+                      "actionType": {
+                        "_type": "string"
+                      },
+                      "metadata": {
+                        "_type": "object",
+                        "green": {
+                          "_type": "boolean"
+                        },
+                        "orderId": {
+                          "_type": "string"
+                        },
+                        "red": {
+                          "_type": "boolean"
+                        },
+                        "type": {
+                          "_type": "string"
+                        },
+                        "yellow": {
+                          "_type": "boolean"
+                        }
+                      }
+                    }
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.actions[].metadata.type",
+              "first_message": "2026-06-10T07:44:30.791506+00:00",
+              "last_message": "2026-06-10T09:40:10.003838+00:00",
+              "observation_duration_seconds": 6939.212332,
+              "message_interval_seconds": {
+                "minimum": 6.1e-05,
+                "maximum": 586.479394,
+                "average": 1.310522,
+                "median": 0.128606
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "connection": {
+            "_topic_occurrences": 398,
+            "_topic": "module/v1/ff/SVR4H92774/connection",
+            "_summary": {
+              "message_count": 398,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "connectionState": {
+                    "_type": "string"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "ip": {
+                    "_type": "string"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.613971+00:00",
+              "last_message": "2026-06-10T09:40:09.897280+00:00",
+              "observation_duration_seconds": 6939.283309,
+              "message_interval_seconds": {
+                "minimum": 0.758592,
+                "maximum": 579.575231,
+                "average": 17.479303,
+                "median": 14.998338
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "state": {
+            "_topic_occurrences": 175,
+            "_topic": "module/v1/ff/SVR4H92774/state",
+            "_summary": {
+              "message_count": 175,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actionState": {
+                    "_type": "null, object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "metadata": {
+                      "_type": "object",
+                      "green": {
+                        "_type": "boolean"
+                      },
+                      "red": {
+                        "_type": "boolean"
+                      },
+                      "type": {
+                        "_type": "string"
+                      },
+                      "yellow": {
+                        "_type": "boolean"
+                      }
+                    },
+                    "result": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    }
+                  },
+                  "actionStates": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "command": {
+                        "_type": "string"
+                      },
+                      "id": {
+                        "_type": "string"
+                      },
+                      "metadata": {
+                        "_type": "object",
+                        "workpiece": {
+                          "_type": "object",
+                          "history": {
+                            "_type": "array",
+                            "items": {
+                              "_type": "object",
+                              "code": {
+                                "_type": "number"
+                              },
+                              "ts": {
+                                "_type": "number"
+                              }
+                            }
+                          },
+                          "state": {
+                            "_type": "string"
+                          },
+                          "type": {
+                            "_type": "string"
+                          },
+                          "workpieceId": {
+                            "_type": "string"
+                          }
+                        }
+                      },
+                      "result": {
+                        "_type": "string"
+                      },
+                      "state": {
+                        "_type": "string"
+                      },
+                      "timestamp": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "batteryState": {
+                    "_type": "object"
+                  },
+                  "errors": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "errorLevel": {
+                        "_type": "string"
+                      },
+                      "errorType": {
+                        "_type": "string"
+                      },
+                      "timestamp": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "information": {
+                    "_type": "array"
+                  },
+                  "loads": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "loadType": {
+                        "_type": "string"
+                      },
+                      "type": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "metadata": {
+                    "_type": "object",
+                    "opcuaState": {
+                      "_type": "string"
+                    }
+                  },
+                  "operatingMode": {
+                    "_type": "string"
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "paused": {
+                    "_type": "boolean"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.actionState.metadata.type, payload.actionStates[].metadata.workpiece.type, payload.loads[].type",
+              "first_message": "2026-06-10T07:44:30.613720+00:00",
+              "last_message": "2026-06-10T09:33:07.391959+00:00",
+              "observation_duration_seconds": 6516.778239,
+              "message_interval_seconds": {
+                "minimum": 0.000163,
+                "maximum": 868.384447,
+                "average": 37.452748,
+                "median": 18.275651
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "order": {
+            "_topic_occurrences": 34,
+            "_topic": "module/v1/ff/SVR4H92774/order",
+            "_summary": {
+              "message_count": 34,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "action": {
+                    "_type": "object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "metadata": {
+                      "_type": "object",
+                      "workpiece": {
+                        "_type": "object",
+                        "history": {
+                          "_type": "array",
+                          "items": {
+                            "_type": "object",
+                            "code": {
+                              "_type": "number"
+                            },
+                            "ts": {
+                              "_type": "number"
+                            }
+                          }
+                        },
+                        "state": {
+                          "_type": "string"
+                        },
+                        "type": {
+                          "_type": "string"
+                        },
+                        "workpieceId": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.action.metadata.workpiece.type",
+              "first_message": "2026-06-10T07:45:17.370676+00:00",
+              "last_message": "2026-06-10T09:32:30.827882+00:00",
+              "observation_duration_seconds": 6433.457206,
+              "message_interval_seconds": {
+                "minimum": 16.849728,
+                "maximum": 1304.394903,
+                "average": 194.953249,
+                "median": 133.652867
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "factsheet": {
+            "_topic_occurrences": 6,
+            "_topic": "module/v1/ff/SVR4H92774/factsheet",
+            "_summary": {
+              "message_count": 6,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loadSpecification": {
+                    "_type": "object",
+                    "loadSets": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "loadType": {
+                          "_type": "string"
+                        },
+                        "setName": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "localizationParameters": {
+                    "_type": "object"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "physicalParameters": {
+                    "_type": "object"
+                  },
+                  "protocolFeatures": {
+                    "_type": "object",
+                    "moduleActions": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "actionParameters": {
+                          "_type": "array",
+                          "items": {
+                            "_type": "object",
+                            "isOptional": {
+                              "_type": "boolean"
+                            },
+                            "parameterDescription": {
+                              "_type": "string"
+                            },
+                            "parameterName": {
+                              "_type": "string"
+                            },
+                            "parameterType": {
+                              "_type": "string"
+                            }
+                          }
+                        },
+                        "actionScopes": {
+                          "_type": "array"
+                        },
+                        "actionType": {
+                          "_type": "string"
+                        }
+                      }
+                    },
+                    "moduleParameters": {
+                      "_type": "object",
+                      "clearModuleOnPick": {
+                        "_type": "boolean"
+                      }
+                    }
+                  },
+                  "protocolLimits": {
+                    "_type": "object"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "typeSpecification": {
+                    "_type": "object",
+                    "moduleClass": {
+                      "_type": "string"
+                    },
+                    "seriesName": {
+                      "_type": "string"
+                    }
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.typeSpecification.moduleClass",
+              "first_message": "2026-06-10T07:44:30.614230+00:00",
+              "last_message": "2026-06-10T09:13:49.291324+00:00",
+              "observation_duration_seconds": 5358.677094,
+              "message_interval_seconds": {
+                "minimum": 707.647128,
+                "maximum": 1415.567478,
+                "average": 1071.735419,
+                "median": 1120.968105
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "_topic_occurrences": 5909
+        },
+        "SVR4H73901": {
+          "connection": {
+            "_topic_occurrences": 398,
+            "_topic": "module/v1/ff/SVR4H73901/connection",
+            "_summary": {
+              "message_count": 398,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "connectionState": {
+                    "_type": "string"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "ip": {
+                    "_type": "string"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.586970+00:00",
+              "last_message": "2026-06-10T09:40:09.789957+00:00",
+              "observation_duration_seconds": 6939.202987,
+              "message_interval_seconds": {
+                "minimum": 0.785933,
+                "maximum": 579.638301,
+                "average": 17.479101,
+                "median": 14.999541
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "state": {
+            "_topic_occurrences": 118,
+            "_topic": "module/v1/ff/SVR4H73901/state",
+            "_summary": {
+              "message_count": 118,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actionState": {
+                    "_type": "null, object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "metadata": {
+                      "_type": "object",
+                      "type": {
+                        "_type": "string"
+                      },
+                      "workpieceId": {
+                        "_type": "string"
+                      }
+                    },
+                    "result": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    }
+                  },
+                  "errors": {
+                    "_type": "array"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "information": {
+                    "_type": "array"
+                  },
+                  "loads": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "loadId": {
+                        "_type": "string"
+                      },
+                      "loadPosition": {
+                        "_type": "string"
+                      },
+                      "loadTimestamp": {
+                        "_type": "number"
+                      },
+                      "loadType": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "metadata": {
+                    "_type": "object",
+                    "opcuaState": {
+                      "_type": "string"
+                    }
+                  },
+                  "operatingMode": {
+                    "_type": "string"
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "paused": {
+                    "_type": "boolean"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.actionState.metadata.type",
+              "first_message": "2026-06-10T07:44:30.586754+00:00",
+              "last_message": "2026-06-10T09:36:27.296821+00:00",
+              "observation_duration_seconds": 6716.710067,
+              "message_interval_seconds": {
+                "minimum": 1.575125,
+                "maximum": 676.141984,
+                "average": 57.407778,
+                "median": 40.132434
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "order": {
+            "_topic_occurrences": 56,
+            "_topic": "module/v1/ff/SVR4H73901/order",
+            "_summary": {
+              "message_count": 56,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "action": {
+                    "_type": "object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "metadata": {
+                      "_type": "object",
+                      "type": {
+                        "_type": "string"
+                      },
+                      "workpieceId": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.action.metadata.type",
+              "first_message": "2026-06-10T07:45:44.834002+00:00",
+              "last_message": "2026-06-10T09:35:48.063379+00:00",
+              "observation_duration_seconds": 6603.229377,
+              "message_interval_seconds": {
+                "minimum": 18.854847,
+                "maximum": 774.032827,
+                "average": 120.058716,
+                "median": 85.619654
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "factsheet": {
+            "_topic_occurrences": 6,
+            "_topic": "module/v1/ff/SVR4H73901/factsheet",
+            "_summary": {
+              "message_count": 6,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loadSpecification": {
+                    "_type": "object",
+                    "loadPositions": {
+                      "_type": "array"
+                    },
+                    "loadSets": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "loadType": {
+                          "_type": "string"
+                        },
+                        "maxAmount": {
+                          "_type": "number"
+                        },
+                        "setName": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "localizationParameters": {
+                    "_type": "object"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "physicalParameters": {
+                    "_type": "object"
+                  },
+                  "protocolFeatures": {
+                    "_type": "object",
+                    "moduleActions": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "actionParameters": {
+                          "_type": "array",
+                          "items": {
+                            "_type": "object",
+                            "isOptional": {
+                              "_type": "boolean"
+                            },
+                            "parameterDescription": {
+                              "_type": "string"
+                            },
+                            "parameterName": {
+                              "_type": "string"
+                            },
+                            "parameterType": {
+                              "_type": "string"
+                            }
+                          }
+                        },
+                        "actionScopes": {
+                          "_type": "array"
+                        },
+                        "actionType": {
+                          "_type": "string"
+                        }
+                      }
+                    },
+                    "moduleParameters": {
+                      "_type": "object",
+                      "clearModuleOnPick": {
+                        "_type": "boolean"
+                      }
+                    }
+                  },
+                  "protocolLimits": {
+                    "_type": "object"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "typeSpecification": {
+                    "_type": "object",
+                    "moduleClass": {
+                      "_type": "string"
+                    },
+                    "seriesName": {
+                      "_type": "string"
+                    }
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.typeSpecification.moduleClass",
+              "first_message": "2026-06-10T07:44:30.612948+00:00",
+              "last_message": "2026-06-10T09:13:49.291023+00:00",
+              "observation_duration_seconds": 5358.678075,
+              "message_interval_seconds": {
+                "minimum": 707.647772,
+                "maximum": 1415.564762,
+                "average": 1071.735615,
+                "median": 1120.968191
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "_topic_occurrences": 578
+        },
+        "SVR3QL1089": {
+          "connection": {
+            "_topic_occurrences": 398,
+            "_topic": "module/v1/ff/SVR3QL1089/connection",
+            "_summary": {
+              "message_count": 398,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "connectionState": {
+                    "_type": "string"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "ip": {
+                    "_type": "string"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.577522+00:00",
+              "last_message": "2026-06-10T09:40:09.515928+00:00",
+              "observation_duration_seconds": 6938.938406,
+              "message_interval_seconds": {
+                "minimum": 0.34967,
+                "maximum": 580.1109,
+                "average": 17.478434,
+                "median": 14.998276
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "state": {
+            "_topic_occurrences": 95,
+            "_topic": "module/v1/ff/SVR3QL1089/state",
+            "_summary": {
+              "message_count": 95,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actionState": {
+                    "_type": "null, object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "duration": {
+                      "_type": "number"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    }
+                  },
+                  "errors": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object"
+                    }
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loads": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "duration": {
+                        "_type": "number"
+                      },
+                      "loadType": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "metadata": {
+                    "_type": "object",
+                    "opcuaState": {
+                      "_type": "string"
+                    }
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number, string"
+                  },
+                  "paused": {
+                    "_type": "boolean"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.577356+00:00",
+              "last_message": "2026-06-10T09:37:40.670751+00:00",
+              "observation_duration_seconds": 6790.093395,
+              "message_interval_seconds": {
+                "minimum": 0.102857,
+                "maximum": 755.89269,
+                "average": 72.235036,
+                "median": 10.157765000000001
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "order": {
+            "_topic_occurrences": 44,
+            "_topic": "module/v1/ff/SVR3QL1089/order",
+            "_summary": {
+              "message_count": 44,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "action": {
+                    "_type": "object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "metadata": {
+                      "_type": "object",
+                      "duration": {
+                        "_type": "number"
+                      },
+                      "type": {
+                        "_type": "string"
+                      },
+                      "workpieceId": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.action.metadata.type",
+              "first_message": "2026-06-10T07:47:55.021500+00:00",
+              "last_message": "2026-06-10T09:37:31.058172+00:00",
+              "observation_duration_seconds": 6576.036672,
+              "message_interval_seconds": {
+                "minimum": 10.456199,
+                "maximum": 953.581572,
+                "average": 152.931085,
+                "median": 53.671188
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "factsheet": {
+            "_topic_occurrences": 6,
+            "_topic": "module/v1/ff/SVR3QL1089/factsheet",
+            "_summary": {
+              "message_count": 6,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loadSpecification": {
+                    "_type": "object",
+                    "loadSets": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "loadType": {
+                          "_type": "string"
+                        },
+                        "setName": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "localizationParameters": {
+                    "_type": "object"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "physicalParameters": {
+                    "_type": "object"
+                  },
+                  "protocolFeatures": {
+                    "_type": "object",
+                    "moduleActions": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "actionParameters": {
+                          "_type": "array",
+                          "items": {
+                            "_type": "object",
+                            "isOptional": {
+                              "_type": "boolean"
+                            },
+                            "parameterDescription": {
+                              "_type": "string"
+                            },
+                            "parameterName": {
+                              "_type": "string"
+                            },
+                            "parameterType": {
+                              "_type": "string"
+                            }
+                          }
+                        },
+                        "actionType": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "protocolLimits": {
+                    "_type": "object"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "typeSpecification": {
+                    "_type": "object",
+                    "moduleClass": {
+                      "_type": "string"
+                    },
+                    "seriesName": {
+                      "_type": "string"
+                    }
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.typeSpecification.moduleClass",
+              "first_message": "2026-06-10T07:44:30.577681+00:00",
+              "last_message": "2026-06-10T09:13:49.290547+00:00",
+              "observation_duration_seconds": 5358.712866,
+              "message_interval_seconds": {
+                "minimum": 707.681856,
+                "maximum": 1415.56324,
+                "average": 1071.742573,
+                "median": 1120.968286
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "_topic_occurrences": 543
+        },
+        "SVR4H88474": {
+          "connection": {
+            "_topic_occurrences": 398,
+            "_topic": "module/v1/ff/SVR4H88474/connection",
+            "_summary": {
+              "message_count": 398,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "connectionState": {
+                    "_type": "string"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "ip": {
+                    "_type": "string"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.576926+00:00",
+              "last_message": "2026-06-10T09:40:09.415532+00:00",
+              "observation_duration_seconds": 6938.838606,
+              "message_interval_seconds": {
+                "minimum": 0.214343,
+                "maximum": 580.124647,
+                "average": 17.478183,
+                "median": 15.001017
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "state": {
+            "_topic_occurrences": 84,
+            "_topic": "module/v1/ff/SVR4H88474/state",
+            "_summary": {
+              "message_count": 84,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actionState": {
+                    "_type": "null, object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "duration": {
+                      "_type": "number"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    }
+                  },
+                  "errors": {
+                    "_type": "array"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loads": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "duration": {
+                        "_type": "number"
+                      },
+                      "loadType": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "metadata": {
+                    "_type": "object",
+                    "opcuaState": {
+                      "_type": "string"
+                    }
+                  },
+                  "orderId": {
+                    "_type": "number, string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number, string"
+                  },
+                  "paused": {
+                    "_type": "boolean"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.576688+00:00",
+              "last_message": "2026-06-10T09:35:38.232343+00:00",
+              "observation_duration_seconds": 6667.655655,
+              "message_interval_seconds": {
+                "minimum": 0.068106,
+                "maximum": 727.176286,
+                "average": 80.333201,
+                "median": 9.750769
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "order": {
+            "_topic_occurrences": 39,
+            "_topic": "module/v1/ff/SVR4H88474/order",
+            "_summary": {
+              "message_count": 39,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "action": {
+                    "_type": "object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "metadata": {
+                      "_type": "object",
+                      "duration": {
+                        "_type": "number"
+                      },
+                      "type": {
+                        "_type": "string"
+                      },
+                      "workpieceId": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.action.metadata.type",
+              "first_message": "2026-06-10T07:57:04.406117+00:00",
+              "last_message": "2026-06-10T09:35:30.624367+00:00",
+              "observation_duration_seconds": 5906.21825,
+              "message_interval_seconds": {
+                "minimum": 9.64422,
+                "maximum": 1169.524003,
+                "average": 155.426796,
+                "median": 56.855568000000005
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "factsheet": {
+            "_topic_occurrences": 6,
+            "_topic": "module/v1/ff/SVR4H88474/factsheet",
+            "_summary": {
+              "message_count": 6,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loadSpecification": {
+                    "_type": "object",
+                    "loadSets": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "loadType": {
+                          "_type": "string"
+                        },
+                        "setName": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "localizationParameters": {
+                    "_type": "object"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "physicalParameters": {
+                    "_type": "object"
+                  },
+                  "protocolFeatures": {
+                    "_type": "object",
+                    "moduleActions": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "actionParameters": {
+                          "_type": "array",
+                          "items": {
+                            "_type": "object",
+                            "isOptional": {
+                              "_type": "boolean"
+                            },
+                            "parameterDescription": {
+                              "_type": "string"
+                            },
+                            "parameterName": {
+                              "_type": "string"
+                            },
+                            "parameterType": {
+                              "_type": "string"
+                            }
+                          }
+                        },
+                        "actionType": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "protocolLimits": {
+                    "_type": "object"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "typeSpecification": {
+                    "_type": "object",
+                    "moduleClass": {
+                      "_type": "string"
+                    },
+                    "seriesName": {
+                      "_type": "string"
+                    }
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.typeSpecification.moduleClass",
+              "first_message": "2026-06-10T07:44:30.577123+00:00",
+              "last_message": "2026-06-10T09:13:49.290325+00:00",
+              "observation_duration_seconds": 5358.713202,
+              "message_interval_seconds": {
+                "minimum": 707.681905,
+                "maximum": 1415.560343,
+                "average": 1071.74264,
+                "median": 1120.968342
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "_topic_occurrences": 527
+        },
+        "NodeRed": {
+          "SVR4H92774": {
+            "state": {
+              "_topic_occurrences": 309,
+              "_topic": "module/v1/ff/NodeRed/SVR4H92774/state",
+              "_summary": {
+                "message_count": 309,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "actionState": {
+                      "_type": "object",
+                      "command": {
+                        "_type": "string"
+                      },
+                      "id": {
+                        "_type": "string"
+                      },
+                      "result": {
+                        "_type": "null, string"
+                      },
+                      "state": {
+                        "_type": "string"
+                      },
+                      "timestamp": {
+                        "_type": "string"
+                      }
+                    },
+                    "actionStates": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "command": {
+                          "_type": "string"
+                        },
+                        "id": {
+                          "_type": "string"
+                        },
+                        "metadata": {
+                          "_type": "object",
+                          "type": {
+                            "_type": "string"
+                          },
+                          "workpiece": {
+                            "_type": "object",
+                            "history": {
+                              "_type": "array",
+                              "items": {
+                                "_type": "object",
+                                "code": {
+                                  "_type": "number"
+                                },
+                                "ts": {
+                                  "_type": "number"
+                                }
+                              }
+                            },
+                            "state": {
+                              "_type": "string"
+                            },
+                            "type": {
+                              "_type": "string"
+                            },
+                            "workpieceId": {
+                              "_type": "string"
+                            }
+                          }
+                        },
+                        "result": {
+                          "_type": "null, string"
+                        },
+                        "state": {
+                          "_type": "string"
+                        },
+                        "timestamp": {
+                          "_type": "string"
+                        }
+                      }
+                    },
+                    "batteryState": {
+                      "_type": "object"
+                    },
+                    "errors": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "errorLevel": {
+                          "_type": "string"
+                        },
+                        "errorReferences": {
+                          "_type": "array",
+                          "items": {
+                            "_type": "object",
+                            "orderId": {
+                              "_type": "null"
+                            }
+                          }
+                        },
+                        "errorType": {
+                          "_type": "string"
+                        },
+                        "timestamp": {
+                          "_type": "string"
+                        }
+                      }
+                    },
+                    "headerId": {
+                      "_type": "number"
+                    },
+                    "information": {
+                      "_type": "array"
+                    },
+                    "operatingMode": {
+                      "_type": "string"
+                    },
+                    "orderId": {
+                      "_type": "string"
+                    },
+                    "orderUpdateId": {
+                      "_type": "number"
+                    },
+                    "paused": {
+                      "_type": "boolean"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "payload.actionStates[].metadata.type, payload.actionStates[].metadata.workpiece.type",
+                "first_message": "2026-06-10T07:44:30.575459+00:00",
+                "last_message": "2026-06-10T09:33:06.372066+00:00",
+                "observation_duration_seconds": 6515.796607,
+                "message_interval_seconds": {
+                  "minimum": 0.000105,
+                  "maximum": 869.379118,
+                  "average": 21.155184,
+                  "median": 13.385141
+                },
+                "payload_timestamp_fields": "timestamp"
+              }
+            },
+            "order": {
+              "_topic_occurrences": 100,
+              "_topic": "module/v1/ff/NodeRed/SVR4H92774/order",
+              "_summary": {
+                "message_count": 100,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "action": {
+                      "_type": "object",
+                      "command": {
+                        "_type": "string"
+                      },
+                      "id": {
+                        "_type": "string"
+                      },
+                      "metadata": {
+                        "_type": "object",
+                        "type": {
+                          "_type": "string"
+                        },
+                        "workpiece": {
+                          "_type": "object",
+                          "history": {
+                            "_type": "array",
+                            "items": {
+                              "_type": "object",
+                              "code": {
+                                "_type": "number"
+                              },
+                              "ts": {
+                                "_type": "number"
+                              }
+                            }
+                          },
+                          "state": {
+                            "_type": "string"
+                          },
+                          "type": {
+                            "_type": "string"
+                          },
+                          "workpieceId": {
+                            "_type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "orderId": {
+                      "_type": "string"
+                    },
+                    "orderUpdateId": {
+                      "_type": "number"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "payload.action.metadata.type, payload.action.metadata.workpiece.type",
+                "first_message": "2026-06-10T07:44:39.739532+00:00",
+                "last_message": "2026-06-10T09:32:30.840741+00:00",
+                "observation_duration_seconds": 6471.101209,
+                "message_interval_seconds": {
+                  "minimum": 14.855806,
+                  "maximum": 1237.117506,
+                  "average": 65.364659,
+                  "median": 29.652554
+                },
+                "payload_timestamp_fields": "timestamp"
+              }
+            },
+            "connection": {
+              "_topic_occurrences": 6,
+              "_topic": "module/v1/ff/NodeRed/SVR4H92774/connection",
+              "_summary": {
+                "message_count": 6,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "connectionState": {
+                      "_type": "string"
+                    },
+                    "headerId": {
+                      "_type": "number"
+                    },
+                    "ip": {
+                      "_type": "string"
+                    },
+                    "manufacturer": {
+                      "_type": "string"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    },
+                    "version": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "none observed",
+                "first_message": "2026-06-10T07:44:30.574769+00:00",
+                "last_message": "2026-06-10T09:13:49.289564+00:00",
+                "observation_duration_seconds": 5358.714795,
+                "message_interval_seconds": {
+                  "minimum": 707.68285,
+                  "maximum": 1415.556198,
+                  "average": 1071.742959,
+                  "median": 1120.984229
+                },
+                "payload_timestamp_fields": "timestamp"
+              }
+            },
+            "factsheet": {
+              "_topic_occurrences": 6,
+              "_topic": "module/v1/ff/NodeRed/SVR4H92774/factsheet",
+              "_summary": {
+                "message_count": 6,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "headerId": {
+                      "_type": "number"
+                    },
+                    "loadSpecification": {
+                      "_type": "object",
+                      "loadSets": {
+                        "_type": "array",
+                        "items": {
+                          "_type": "object",
+                          "loadType": {
+                            "_type": "string"
+                          },
+                          "setName": {
+                            "_type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "localizationParameters": {
+                      "_type": "object"
+                    },
+                    "manufacturer": {
+                      "_type": "string"
+                    },
+                    "physicalParameters": {
+                      "_type": "object"
+                    },
+                    "protocolFeatures": {
+                      "_type": "object",
+                      "moduleActions": {
+                        "_type": "array",
+                        "items": {
+                          "_type": "object",
+                          "actionParameters": {
+                            "_type": "array",
+                            "items": {
+                              "_type": "object",
+                              "isOptional": {
+                                "_type": "boolean"
+                              },
+                              "parameterDescription": {
+                                "_type": "string"
+                              },
+                              "parameterName": {
+                                "_type": "string"
+                              },
+                              "parameterType": {
+                                "_type": "string"
+                              }
+                            }
+                          },
+                          "actionScopes": {
+                            "_type": "array"
+                          },
+                          "actionType": {
+                            "_type": "string"
+                          }
+                        }
+                      },
+                      "moduleParameters": {
+                        "_type": "object",
+                        "clearModuleOnPick": {
+                          "_type": "boolean"
+                        }
+                      }
+                    },
+                    "protocolLimits": {
+                      "_type": "object"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    },
+                    "typeSpecification": {
+                      "_type": "object",
+                      "moduleClass": {
+                        "_type": "string"
+                      },
+                      "seriesName": {
+                        "_type": "string"
+                      }
+                    },
+                    "version": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "payload.typeSpecification.moduleClass",
+                "first_message": "2026-06-10T07:44:30.575751+00:00",
+                "last_message": "2026-06-10T09:13:49.289752+00:00",
+                "observation_duration_seconds": 5358.714001,
+                "message_interval_seconds": {
+                  "minimum": 707.682206,
+                  "maximum": 1415.556168,
+                  "average": 1071.7428,
+                  "median": 1120.984243
+                },
+                "payload_timestamp_fields": "timestamp"
+              }
+            },
+            "_topic_occurrences": 421
+          },
+          "SVR4H77011": {
+            "state": {
+              "_topic_occurrences": 70,
+              "_topic": "module/v1/ff/NodeRed/SVR4H77011/state",
+              "_summary": {
+                "message_count": 70,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "actionState": {
+                      "_type": "object",
+                      "command": {
+                        "_type": "string"
+                      },
+                      "id": {
+                        "_type": "string"
+                      },
+                      "result": {
+                        "_type": "string"
+                      },
+                      "state": {
+                        "_type": "string"
+                      },
+                      "timestamp": {
+                        "_type": "string"
+                      }
+                    },
+                    "batteryState": {
+                      "_type": "object"
+                    },
+                    "errors": {
+                      "_type": "array"
+                    },
+                    "headerId": {
+                      "_type": "number"
+                    },
+                    "orderId": {
+                      "_type": "string"
+                    },
+                    "orderUpdateId": {
+                      "_type": "number"
+                    },
+                    "paused": {
+                      "_type": "boolean"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "none observed",
+                "first_message": "2026-06-10T07:44:30.576356+00:00",
+                "last_message": "2026-06-10T09:37:24.784208+00:00",
+                "observation_duration_seconds": 6774.207852,
+                "message_interval_seconds": {
+                  "minimum": 0.000957,
+                  "maximum": 878.912893,
+                  "average": 98.176925,
+                  "median": 3.160147
+                },
+                "payload_timestamp_fields": "timestamp"
+              }
+            },
+            "order": {
+              "_topic_occurrences": 16,
+              "_topic": "module/v1/ff/NodeRed/SVR4H77011/order",
+              "_summary": {
+                "message_count": 16,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "action": {
+                      "_type": "object",
+                      "command": {
+                        "_type": "string"
+                      },
+                      "id": {
+                        "_type": "string"
+                      },
+                      "metadata": {
+                        "_type": "object",
+                        "type": {
+                          "_type": "string"
+                        },
+                        "workpieceId": {
+                          "_type": "string"
+                        }
+                      }
+                    },
+                    "orderId": {
+                      "_type": "string"
+                    },
+                    "orderUpdateId": {
+                      "_type": "number"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "payload.action.metadata.type",
+                "first_message": "2026-06-10T07:50:58.787628+00:00",
+                "last_message": "2026-06-10T09:37:20.878321+00:00",
+                "observation_duration_seconds": 6382.090693,
+                "message_interval_seconds": {
+                  "minimum": 49.887685,
+                  "maximum": 1601.320971,
+                  "average": 425.472713,
+                  "median": 349.124477
+                },
+                "payload_timestamp_fields": "timestamp"
+              }
+            },
+            "connection": {
+              "_topic_occurrences": 6,
+              "_topic": "module/v1/ff/NodeRed/SVR4H77011/connection",
+              "_summary": {
+                "message_count": 6,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "connectionState": {
+                      "_type": "string"
+                    },
+                    "headerId": {
+                      "_type": "number"
+                    },
+                    "manufacturer": {
+                      "_type": "string"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    },
+                    "version": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "none observed",
+                "first_message": "2026-06-10T07:44:30.576189+00:00",
+                "last_message": "2026-06-10T09:13:49.289893+00:00",
+                "observation_duration_seconds": 5358.713704,
+                "message_interval_seconds": {
+                  "minimum": 707.68205,
+                  "maximum": 1415.55616,
+                  "average": 1071.742741,
+                  "median": 1120.984252
+                },
+                "payload_timestamp_fields": "timestamp"
+              }
+            },
+            "factsheet": {
+              "_topic_occurrences": 6,
+              "_topic": "module/v1/ff/NodeRed/SVR4H77011/factsheet",
+              "_summary": {
+                "message_count": 6,
+                "payload_shape": "object",
+                "payload_structure": {
+                  "payload": {
+                    "_type": "object",
+                    "headerId": {
+                      "_type": "number"
+                    },
+                    "loadSpecification": {
+                      "_type": "object",
+                      "loadSets": {
+                        "_type": "array"
+                      }
+                    },
+                    "localizationParameters": {
+                      "_type": "object"
+                    },
+                    "manufacturer": {
+                      "_type": "string"
+                    },
+                    "physicalParameters": {
+                      "_type": "object"
+                    },
+                    "protocolFeatures": {
+                      "_type": "object",
+                      "moduleActions": {
+                        "_type": "array",
+                        "items": {
+                          "_type": "object",
+                          "actionParameters": {
+                            "_type": "array",
+                            "items": {
+                              "_type": "object",
+                              "isOptional": {
+                                "_type": "boolean"
+                              },
+                              "parameterDescription": {
+                                "_type": "string"
+                              },
+                              "parameterName": {
+                                "_type": "string"
+                              },
+                              "parameterType": {
+                                "_type": "string"
+                              }
+                            }
+                          },
+                          "actionType": {
+                            "_type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "protocolLimits": {
+                      "_type": "object"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    },
+                    "typeSpecification": {
+                      "_type": "object",
+                      "moduleClass": {
+                        "_type": "string"
+                      },
+                      "seriesName": {
+                        "_type": "string"
+                      }
+                    },
+                    "version": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "classification_fields": "payload.typeSpecification.moduleClass",
+                "first_message": "2026-06-10T07:44:30.576519+00:00",
+                "last_message": "2026-06-10T09:13:49.290082+00:00",
+                "observation_duration_seconds": 5358.713563,
+                "message_interval_seconds": {
+                  "minimum": 707.682023,
+                  "maximum": 1415.557678,
+                  "average": 1071.742713,
+                  "median": 1120.968492
+                },
+                "payload_timestamp_fields": "timestamp"
+              }
+            },
+            "_topic_occurrences": 98
+          },
+          "status": {
+            "_topic_occurrences": 6,
+            "_topic": "module/v1/ff/NodeRed/status",
+            "_summary": {
+              "message_count": 6,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "connectionState": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.574593+00:00",
+              "last_message": "2026-06-10T09:13:49.289472+00:00",
+              "observation_duration_seconds": 5358.714879,
+              "message_interval_seconds": {
+                "minimum": 707.682891,
+                "maximum": 1415.556244,
+                "average": 1071.742976,
+                "median": 1120.984202
+              },
+              "payload_timestamp_fields": "none observed"
+            }
+          },
+          "_topic_occurrences": 525
+        },
+        "SVR4H77011": {
+          "connection": {
+            "_topic_occurrences": 398,
+            "_topic": "module/v1/ff/SVR4H77011/connection",
+            "_summary": {
+              "message_count": 398,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "connectionState": {
+                    "_type": "string"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "ip": {
+                    "_type": "string"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.578070+00:00",
+              "last_message": "2026-06-10T09:40:09.617325+00:00",
+              "observation_duration_seconds": 6939.039255,
+              "message_interval_seconds": {
+                "minimum": 0.496523,
+                "maximum": 579.880604,
+                "average": 17.478688,
+                "median": 14.999373
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "state": {
+            "_topic_occurrences": 78,
+            "_topic": "module/v1/ff/SVR4H77011/state",
+            "_summary": {
+              "message_count": 78,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actionState": {
+                    "_type": "null, object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "metadata": {
+                      "_type": "object",
+                      "type": {
+                        "_type": "string"
+                      },
+                      "workpieceId": {
+                        "_type": "string"
+                      }
+                    },
+                    "result": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    }
+                  },
+                  "errors": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "errorLevel": {
+                        "_type": "string"
+                      },
+                      "errorMessage": {
+                        "_type": "string"
+                      },
+                      "errorReferences": {
+                        "_type": "array",
+                        "items": {
+                          "_type": "object",
+                          "headerId": {
+                            "_type": "number"
+                          },
+                          "orderId": {
+                            "_type": "string"
+                          },
+                          "orderUpdateId": {
+                            "_type": "number"
+                          },
+                          "topic": {
+                            "_type": "string"
+                          }
+                        }
+                      },
+                      "errorType": {
+                        "_type": "string"
+                      },
+                      "timestamp": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loads": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "loadType": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "metadata": {
+                    "_type": "object",
+                    "opcuaState": {
+                      "_type": "string"
+                    }
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "paused": {
+                    "_type": "boolean"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.actionState.metadata.type",
+              "first_message": "2026-06-10T07:44:30.577911+00:00",
+              "last_message": "2026-06-10T09:37:27.012730+00:00",
+              "observation_duration_seconds": 6776.434819,
+              "message_interval_seconds": {
+                "minimum": 0.040156,
+                "maximum": 653.394515,
+                "average": 88.005647,
+                "median": 8.422694
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "order": {
+            "_topic_occurrences": 36,
+            "_topic": "module/v1/ff/SVR4H77011/order",
+            "_summary": {
+              "message_count": 36,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "action": {
+                    "_type": "object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "metadata": {
+                      "_type": "object",
+                      "type": {
+                        "_type": "string"
+                      },
+                      "workpieceId": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.action.metadata.type",
+              "first_message": "2026-06-10T07:50:46.920802+00:00",
+              "last_message": "2026-06-10T09:37:18.107795+00:00",
+              "observation_duration_seconds": 6391.186993,
+              "message_interval_seconds": {
+                "minimum": 8.018628,
+                "maximum": 1016.322211,
+                "average": 182.605343,
+                "median": 10.297705
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "factsheet": {
+            "_topic_occurrences": 6,
+            "_topic": "module/v1/ff/SVR4H77011/factsheet",
+            "_summary": {
+              "message_count": 6,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loadSpecification": {
+                    "_type": "object",
+                    "loadSets": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "loadType": {
+                          "_type": "string"
+                        },
+                        "setName": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "localizationParameters": {
+                    "_type": "object"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "physicalParameters": {
+                    "_type": "object"
+                  },
+                  "protocolFeatures": {
+                    "_type": "object",
+                    "moduleActions": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "actionParameters": {
+                          "_type": "array",
+                          "items": {
+                            "_type": "object",
+                            "isOptional": {
+                              "_type": "boolean"
+                            },
+                            "parameterDescription": {
+                              "_type": "string"
+                            },
+                            "parameterName": {
+                              "_type": "string"
+                            },
+                            "parameterType": {
+                              "_type": "string"
+                            }
+                          }
+                        },
+                        "actionScopes": {
+                          "_type": "array"
+                        },
+                        "actionType": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "protocolLimits": {
+                    "_type": "object"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "typeSpecification": {
+                    "_type": "object",
+                    "moduleClass": {
+                      "_type": "string"
+                    },
+                    "seriesName": {
+                      "_type": "string"
+                    }
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.typeSpecification.moduleClass",
+              "first_message": "2026-06-10T07:44:30.578219+00:00",
+              "last_message": "2026-06-10T09:13:49.290748+00:00",
+              "observation_duration_seconds": 5358.712529,
+              "message_interval_seconds": {
+                "minimum": 707.681858,
+                "maximum": 1415.563398,
+                "average": 1071.742506,
+                "median": 1120.96825
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "_topic_occurrences": 518
+        },
+        "_topic_occurrences": 8600
+      },
+      "_topic_occurrences": 8600
+    },
+    "_topic_occurrences": 8600
+  },
+  "ccu": {
+    "pairing": {
+      "state": {
+        "_topic_occurrences": 5300,
+        "_topic": "ccu/pairing/state",
+        "_summary": {
+          "message_count": 5300,
+          "payload_shape": "object",
+          "payload_structure": {
+            "payload": {
+              "_type": "object",
+              "modules": {
+                "_type": "array",
+                "items": {
+                  "_type": "object",
+                  "assigned": {
+                    "_type": "boolean"
+                  },
+                  "available": {
+                    "_type": "string"
+                  },
+                  "connected": {
+                    "_type": "boolean"
+                  },
+                  "hasCalibration": {
+                    "_type": "boolean"
+                  },
+                  "ip": {
+                    "_type": "string"
+                  },
+                  "lastSeen": {
+                    "_type": "string"
+                  },
+                  "pairedSince": {
+                    "_type": "string"
+                  },
+                  "productionDuration": {
+                    "_type": "number"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "subType": {
+                    "_type": "string"
+                  },
+                  "type": {
+                    "_type": "string"
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "transports": {
+                "_type": "array",
+                "items": {
+                  "_type": "object",
+                  "available": {
+                    "_type": "string"
+                  },
+                  "batteryPercentage": {
+                    "_type": "number"
+                  },
+                  "batteryVoltage": {
+                    "_type": "number"
+                  },
+                  "charging": {
+                    "_type": "boolean"
+                  },
+                  "connected": {
+                    "_type": "boolean"
+                  },
+                  "ip": {
+                    "_type": "string"
+                  },
+                  "lastLoadPosition": {
+                    "_type": "string"
+                  },
+                  "lastModuleSerialNumber": {
+                    "_type": "string"
+                  },
+                  "lastNodeId": {
+                    "_type": "string"
+                  },
+                  "lastSeen": {
+                    "_type": "string"
+                  },
+                  "pairedSince": {
+                    "_type": "string"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "type": {
+                    "_type": "string"
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "classification_fields": "payload.modules[].subType, payload.modules[].type, payload.transports[].type",
+          "first_message": "2026-06-10T07:44:30.324393+00:00",
+          "last_message": "2026-06-10T09:40:10.004020+00:00",
+          "observation_duration_seconds": 6939.679627,
+          "message_interval_seconds": {
+            "minimum": 0.000103,
+            "maximum": 579.493553,
+            "average": 1.309621,
+            "median": 0.124192
+          },
+          "payload_timestamp_fields": "none observed"
+        }
+      },
+      "pair_fts": {
+        "_topic_occurrences": 1,
+        "_topic": "ccu/pairing/pair_fts",
+        "_summary": {
+          "message_count": 1,
+          "payload_shape": "object",
+          "payload_structure": {
+            "payload": {
+              "_type": "object",
+              "serialNumber": {
+                "_type": "string"
+              }
+            }
+          },
+          "classification_fields": "none observed",
+          "first_message": "2026-06-10T07:44:33.111680+00:00",
+          "last_message": "2026-06-10T07:44:33.111680+00:00",
+          "observation_duration_seconds": 0,
+          "message_interval_seconds": {
+            "minimum": null,
+            "maximum": null,
+            "average": null,
+            "median": null
+          },
+          "payload_timestamp_fields": "none observed"
+        }
+      },
+      "_topic_occurrences": 5301
+    },
+    "order": {
+      "active": {
+        "_topic_occurrences": 613,
+        "_topic": "ccu/order/active",
+        "_summary": {
+          "message_count": 613,
+          "payload_shape": "array",
+          "payload_structure": {
+            "payload": {
+              "_type": "array",
+              "items": {
+                "_type": "object",
+                "orderId": {
+                  "_type": "string"
+                },
+                "orderType": {
+                  "_type": "string"
+                },
+                "productionSteps": {
+                  "_type": "array",
+                  "items": {
+                    "_type": "object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "dependentActionId": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "moduleType": {
+                      "_type": "string"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "source": {
+                      "_type": "string"
+                    },
+                    "startedAt": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    },
+                    "stoppedAt": {
+                      "_type": "string"
+                    },
+                    "target": {
+                      "_type": "string"
+                    },
+                    "type": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "receivedAt": {
+                  "_type": "string"
+                },
+                "startedAt": {
+                  "_type": "string"
+                },
+                "state": {
+                  "_type": "string"
+                },
+                "timestamp": {
+                  "_type": "string"
+                },
+                "type": {
+                  "_type": "string"
+                },
+                "workpieceId": {
+                  "_type": "string"
+                }
+              }
+            }
+          },
+          "classification_fields": "payload[].orderType, payload[].productionSteps[].type, payload[].type",
+          "first_message": "2026-06-10T07:44:30.324764+00:00",
+          "last_message": "2026-06-10T09:37:40.778402+00:00",
+          "observation_duration_seconds": 6790.453638,
+          "message_interval_seconds": {
+            "minimum": 0.000123,
+            "maximum": 661.409334,
+            "average": 11.095512,
+            "median": 8.363001
+          },
+          "payload_timestamp_fields": "none observed"
+        }
+      },
+      "request": {
+        "_topic_occurrences": 65,
+        "_topic": "ccu/order/request",
+        "_summary": {
+          "message_count": 65,
+          "payload_shape": "object",
+          "payload_structure": {
+            "payload": {
+              "_type": "object",
+              "orderType": {
+                "_type": "string"
+              },
+              "timestamp": {
+                "_type": "string"
+              },
+              "type": {
+                "_type": "string"
+              },
+              "workpieceId": {
+                "_type": "string"
+              }
+            }
+          },
+          "classification_fields": "payload.orderType, payload.type",
+          "first_message": "2026-06-10T07:45:14.970152+00:00",
+          "last_message": "2026-06-10T09:34:43.088032+00:00",
+          "observation_duration_seconds": 6568.11788,
+          "message_interval_seconds": {
+            "minimum": 6.157833,
+            "maximum": 810.505892,
+            "average": 102.626842,
+            "median": 72.099203
+          },
+          "payload_timestamp_fields": "timestamp"
+        }
+      },
+      "response": {
+        "_topic_occurrences": 65,
+        "_topic": "ccu/order/response",
+        "_summary": {
+          "message_count": 65,
+          "payload_shape": "object",
+          "payload_structure": {
+            "payload": {
+              "_type": "object",
+              "orderId": {
+                "_type": "string"
+              },
+              "orderType": {
+                "_type": "string"
+              },
+              "productionSteps": {
+                "_type": "array",
+                "items": {
+                  "_type": "object",
+                  "command": {
+                    "_type": "string"
+                  },
+                  "dependentActionId": {
+                    "_type": "string"
+                  },
+                  "id": {
+                    "_type": "string"
+                  },
+                  "moduleType": {
+                    "_type": "string"
+                  },
+                  "source": {
+                    "_type": "string"
+                  },
+                  "startedAt": {
+                    "_type": "string"
+                  },
+                  "state": {
+                    "_type": "string"
+                  },
+                  "target": {
+                    "_type": "string"
+                  },
+                  "type": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "receivedAt": {
+                "_type": "string"
+              },
+              "startedAt": {
+                "_type": "string"
+              },
+              "state": {
+                "_type": "string"
+              },
+              "timestamp": {
+                "_type": "string"
+              },
+              "type": {
+                "_type": "string"
+              },
+              "workpieceId": {
+                "_type": "string"
+              }
+            }
+          },
+          "classification_fields": "payload.orderType, payload.productionSteps[].type, payload.type",
+          "first_message": "2026-06-10T07:45:15.169453+00:00",
+          "last_message": "2026-06-10T09:34:43.089153+00:00",
+          "observation_duration_seconds": 6567.9197,
+          "message_interval_seconds": {
+            "minimum": 6.169852,
+            "maximum": 810.552592,
+            "average": 102.623745,
+            "median": 72.0862725
+          },
+          "payload_timestamp_fields": "timestamp"
+        }
+      },
+      "completed": {
+        "_topic_occurrences": 54,
+        "_topic": "ccu/order/completed",
+        "_summary": {
+          "message_count": 54,
+          "payload_shape": "array",
+          "payload_structure": {
+            "payload": {
+              "_type": "array",
+              "items": {
+                "_type": "object",
+                "orderId": {
+                  "_type": "string"
+                },
+                "orderType": {
+                  "_type": "string"
+                },
+                "productionSteps": {
+                  "_type": "array",
+                  "items": {
+                    "_type": "object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "dependentActionId": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "moduleType": {
+                      "_type": "string"
+                    },
+                    "serialNumber": {
+                      "_type": "string"
+                    },
+                    "source": {
+                      "_type": "string"
+                    },
+                    "startedAt": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    },
+                    "stoppedAt": {
+                      "_type": "string"
+                    },
+                    "target": {
+                      "_type": "string"
+                    },
+                    "type": {
+                      "_type": "string"
+                    }
+                  }
+                },
+                "receivedAt": {
+                  "_type": "string"
+                },
+                "startedAt": {
+                  "_type": "string"
+                },
+                "state": {
+                  "_type": "string"
+                },
+                "stoppedAt": {
+                  "_type": "string"
+                },
+                "timestamp": {
+                  "_type": "string"
+                },
+                "type": {
+                  "_type": "string"
+                },
+                "workpieceId": {
+                  "_type": "string"
+                }
+              }
+            }
+          },
+          "classification_fields": "payload[].orderType, payload[].productionSteps[].type, payload[].type",
+          "first_message": "2026-06-10T07:44:30.324914+00:00",
+          "last_message": "2026-06-10T09:37:27.074433+00:00",
+          "observation_duration_seconds": 6776.749519,
+          "message_interval_seconds": {
+            "minimum": 19.551737,
+            "maximum": 786.085,
+            "average": 127.863198,
+            "median": 92.891954
+          },
+          "payload_timestamp_fields": "none observed"
+        }
+      },
+      "_topic_occurrences": 797
+    },
+    "state": {
+      "stock": {
+        "_topic_occurrences": 239,
+        "_topic": "ccu/state/stock",
+        "_summary": {
+          "message_count": 239,
+          "payload_shape": "object",
+          "payload_structure": {
+            "payload": {
+              "_type": "object",
+              "stockItems": {
+                "_type": "array",
+                "items": {
+                  "_type": "object",
+                  "hbw": {
+                    "_type": "string"
+                  },
+                  "location": {
+                    "_type": "string"
+                  },
+                  "workpiece": {
+                    "_type": "object",
+                    "id": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    },
+                    "type": {
+                      "_type": "string"
+                    }
+                  }
+                }
+              },
+              "ts": {
+                "_type": "string"
+              }
+            }
+          },
+          "classification_fields": "payload.stockItems[].workpiece.type",
+          "first_message": "2026-06-10T07:44:30.323635+00:00",
+          "last_message": "2026-06-10T09:36:27.461866+00:00",
+          "observation_duration_seconds": 6717.138231,
+          "message_interval_seconds": {
+            "minimum": 0.000221,
+            "maximum": 676.050935,
+            "average": 28.22327,
+            "median": 14.629528
+          },
+          "payload_timestamp_fields": "ts"
+        }
+      },
+      "config": {
+        "_topic_occurrences": 6,
+        "_topic": "ccu/state/config",
+        "_summary": {
+          "message_count": 6,
+          "payload_shape": "object",
+          "payload_structure": {
+            "payload": {
+              "_type": "object",
+              "ftsSettings": {
+                "_type": "object",
+                "chargeThresholdPercent": {
+                  "_type": "number"
+                }
+              },
+              "productionDurations": {
+                "_type": "object",
+                "BLUE": {
+                  "_type": "number"
+                },
+                "RED": {
+                  "_type": "number"
+                },
+                "WHITE": {
+                  "_type": "number"
+                }
+              },
+              "productionSettings": {
+                "_type": "object",
+                "maxParallelOrders": {
+                  "_type": "number"
+                }
+              }
+            }
+          },
+          "classification_fields": "none observed",
+          "first_message": "2026-06-10T07:44:30.323332+00:00",
+          "last_message": "2026-06-10T09:13:49.282981+00:00",
+          "observation_duration_seconds": 5358.959649,
+          "message_interval_seconds": {
+            "minimum": 707.927132,
+            "maximum": 1415.483182,
+            "average": 1071.79193,
+            "median": 1120.980752
+          },
+          "payload_timestamp_fields": "none observed"
+        }
+      },
+      "flows": {
+        "_topic_occurrences": 6,
+        "_topic": "ccu/state/flows",
+        "_summary": {
+          "message_count": 6,
+          "payload_shape": "object",
+          "payload_structure": {
+            "payload": {
+              "_type": "object",
+              "BLUE": {
+                "_type": "object",
+                "steps": {
+                  "_type": "array"
+                }
+              },
+              "RED": {
+                "_type": "object",
+                "steps": {
+                  "_type": "array"
+                }
+              },
+              "WHITE": {
+                "_type": "object",
+                "steps": {
+                  "_type": "array"
+                }
+              }
+            }
+          },
+          "classification_fields": "none observed",
+          "first_message": "2026-06-10T07:44:30.323488+00:00",
+          "last_message": "2026-06-10T09:13:49.283079+00:00",
+          "observation_duration_seconds": 5358.959591,
+          "message_interval_seconds": {
+            "minimum": 707.92711,
+            "maximum": 1415.483189,
+            "average": 1071.791918,
+            "median": 1120.979042
+          },
+          "payload_timestamp_fields": "none observed"
+        }
+      },
+      "layout": {
+        "_topic_occurrences": 6,
+        "_topic": "ccu/state/layout",
+        "_summary": {
+          "message_count": 6,
+          "payload_shape": "object",
+          "payload_structure": {
+            "payload": {
+              "_type": "object",
+              "intersections": {
+                "_type": "array",
+                "items": {
+                  "_type": "object",
+                  "id": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "modules": {
+                "_type": "array",
+                "items": {
+                  "_type": "object",
+                  "placeholder": {
+                    "_type": "boolean"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "type": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "roads": {
+                "_type": "array",
+                "items": {
+                  "_type": "object",
+                  "direction": {
+                    "_type": "string"
+                  },
+                  "from": {
+                    "_type": "string"
+                  },
+                  "length": {
+                    "_type": "number"
+                  },
+                  "to": {
+                    "_type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "classification_fields": "payload.modules[].type",
+          "first_message": "2026-06-10T07:44:30.322903+00:00",
+          "last_message": "2026-06-10T09:13:49.282304+00:00",
+          "observation_duration_seconds": 5358.959401,
+          "message_interval_seconds": {
+            "minimum": 707.927291,
+            "maximum": 1415.483757,
+            "average": 1071.79188,
+            "median": 1120.980342
+          },
+          "payload_timestamp_fields": "none observed"
+        }
+      },
+      "version-mismatch": {
+        "_topic_occurrences": 6,
+        "_topic": "ccu/state/version-mismatch",
+        "_summary": {
+          "message_count": 6,
+          "payload_shape": "object",
+          "payload_structure": {
+            "payload": {
+              "_type": "object",
+              "ccuVersion": {
+                "_type": "string"
+              },
+              "mismatchedModules": {
+                "_type": "array"
+              },
+              "timestamp": {
+                "_type": "string"
+              }
+            }
+          },
+          "classification_fields": "none observed",
+          "first_message": "2026-06-10T07:44:30.322508+00:00",
+          "last_message": "2026-06-10T09:13:49.282000+00:00",
+          "observation_duration_seconds": 5358.959492,
+          "message_interval_seconds": {
+            "minimum": 707.927469,
+            "maximum": 1415.48384,
+            "average": 1071.791898,
+            "median": 1120.980428
+          },
+          "payload_timestamp_fields": "timestamp"
+        }
+      },
+      "_topic_occurrences": 263
+    },
+    "_topic_occurrences": 6361
+  },
+  "fts": {
+    "v1": {
+      "ff": {
+        "1mO4": {
+          "state": {
+            "_topic_occurrences": 1310,
+            "_topic": "fts/v1/ff/1mO4/state",
+            "_summary": {
+              "message_count": 1310,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actionState": {
+                    "_type": "object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    }
+                  },
+                  "actionStates": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "command": {
+                        "_type": "string"
+                      },
+                      "id": {
+                        "_type": "string"
+                      },
+                      "state": {
+                        "_type": "string"
+                      },
+                      "timestamp": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "batteryState": {
+                    "_type": "object",
+                    "charging": {
+                      "_type": "boolean"
+                    },
+                    "currentVoltage": {
+                      "_type": "number"
+                    },
+                    "maxVolt": {
+                      "_type": "number"
+                    },
+                    "minVolt": {
+                      "_type": "number"
+                    },
+                    "percentage": {
+                      "_type": "number"
+                    }
+                  },
+                  "driving": {
+                    "_type": "boolean"
+                  },
+                  "edgeStates": {
+                    "_type": "array"
+                  },
+                  "errors": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "errorLevel": {
+                        "_type": "string"
+                      },
+                      "errorType": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "lastCode": {
+                    "_type": "string"
+                  },
+                  "lastNodeId": {
+                    "_type": "string"
+                  },
+                  "lastNodeSequenceId": {
+                    "_type": "number"
+                  },
+                  "load": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "loadId": {
+                        "_type": "null, string"
+                      },
+                      "loadPosition": {
+                        "_type": "string"
+                      },
+                      "loadType": {
+                        "_type": "null, string"
+                      }
+                    }
+                  },
+                  "nodeStates": {
+                    "_type": "array"
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "paused": {
+                    "_type": "boolean"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "waitingForLoadHandling": {
+                    "_type": "boolean"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T08:15:07.560077+00:00",
+              "last_message": "2026-06-10T09:37:40.801775+00:00",
+              "observation_duration_seconds": 4953.241698,
+              "message_interval_seconds": {
+                "minimum": 0.000141,
+                "maximum": 1120.968149,
+                "average": 3.783989,
+                "median": 0.14707
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "instantAction": {
+            "_topic_occurrences": 90,
+            "_topic": "fts/v1/ff/1mO4/instantAction",
+            "_summary": {
+              "message_count": 90,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actions": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "actionId": {
+                        "_type": "string"
+                      },
+                      "actionType": {
+                        "_type": "string"
+                      },
+                      "metadata": {
+                        "_type": "object",
+                        "loadDropped": {
+                          "_type": "boolean"
+                        },
+                        "loadId": {
+                          "_type": "string"
+                        },
+                        "loadPosition": {
+                          "_type": "string"
+                        },
+                        "loadType": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T08:15:07.480586+00:00",
+              "last_message": "2026-06-10T09:37:40.772774+00:00",
+              "observation_duration_seconds": 4953.292188,
+              "message_interval_seconds": {
+                "minimum": 9.87383,
+                "maximum": 1847.962243,
+                "average": 55.654968,
+                "median": 28.077119
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "order": {
+            "_topic_occurrences": 90,
+            "_topic": "fts/v1/ff/1mO4/order",
+            "_summary": {
+              "message_count": 90,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "edges": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "id": {
+                        "_type": "string"
+                      },
+                      "length": {
+                        "_type": "number"
+                      },
+                      "linkedNodes": {
+                        "_type": "array"
+                      }
+                    }
+                  },
+                  "nodes": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "action": {
+                        "_type": "object",
+                        "id": {
+                          "_type": "string"
+                        },
+                        "metadata": {
+                          "_type": "object",
+                          "direction": {
+                            "_type": "string"
+                          },
+                          "loadId": {
+                            "_type": "string"
+                          },
+                          "loadPosition": {
+                            "_type": "string"
+                          },
+                          "loadType": {
+                            "_type": "string"
+                          }
+                        },
+                        "type": {
+                          "_type": "string"
+                        }
+                      },
+                      "id": {
+                        "_type": "string"
+                      },
+                      "linkedEdges": {
+                        "_type": "array"
+                      }
+                    }
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.nodes[].action.type",
+              "first_message": "2026-06-10T08:17:30.928811+00:00",
+              "last_message": "2026-06-10T09:37:18.277222+00:00",
+              "observation_duration_seconds": 4787.348411,
+              "message_interval_seconds": {
+                "minimum": 9.90837,
+                "maximum": 1831.059562,
+                "average": 53.790432,
+                "median": 27.97141
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "connection": {
+            "_topic_occurrences": 5,
+            "_topic": "fts/v1/ff/1mO4/connection",
+            "_summary": {
+              "message_count": 5,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "connectionState": {
+                    "_type": "string"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "ip": {
+                    "_type": "string"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T08:15:07.480436+00:00",
+              "last_message": "2026-06-10T09:13:49.291700+00:00",
+              "observation_duration_seconds": 3521.811264,
+              "message_interval_seconds": {
+                "minimum": 106.357715,
+                "maximum": 1415.570492,
+                "average": 880.452816,
+                "median": 999.9415285
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "factsheet": {
+            "_topic_occurrences": 5,
+            "_topic": "fts/v1/ff/1mO4/factsheet",
+            "_summary": {
+              "message_count": 5,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "agvGeometry": {
+                    "_type": "object"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loadSpecification": {
+                    "_type": "object",
+                    "loadPositions": {
+                      "_type": "array"
+                    },
+                    "loadSets": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "loadType": {
+                          "_type": "string"
+                        },
+                        "setName": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "localizationParameters": {
+                    "_type": "object"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "physicalParameters": {
+                    "_type": "object"
+                  },
+                  "protocolFeatures": {
+                    "_type": "object",
+                    "agvActions": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "actionScopes": {
+                          "_type": "string"
+                        },
+                        "actionType": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "protocolLimits": {
+                    "_type": "object"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "typeSpecification": {
+                    "_type": "object",
+                    "agvClass": {
+                      "_type": "string"
+                    },
+                    "navigationTypes": {
+                      "_type": "array"
+                    },
+                    "seriesName": {
+                      "_type": "string"
+                    }
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.typeSpecification.agvClass",
+              "first_message": "2026-06-10T08:15:07.600277+00:00",
+              "last_message": "2026-06-10T09:13:49.291843+00:00",
+              "observation_duration_seconds": 3521.691566,
+              "message_interval_seconds": {
+                "minimum": 106.238006,
+                "maximum": 1415.57057,
+                "average": 880.422891,
+                "median": 999.941495
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "_topic_occurrences": 1500
+        },
+        "ylK4": {
+          "state": {
+            "_topic_occurrences": 1141,
+            "_topic": "fts/v1/ff/ylK4/state",
+            "_summary": {
+              "message_count": 1141,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actionState": {
+                    "_type": "object",
+                    "command": {
+                      "_type": "string"
+                    },
+                    "id": {
+                      "_type": "string"
+                    },
+                    "state": {
+                      "_type": "string"
+                    },
+                    "timestamp": {
+                      "_type": "string"
+                    }
+                  },
+                  "actionStates": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "command": {
+                        "_type": "string"
+                      },
+                      "id": {
+                        "_type": "string"
+                      },
+                      "state": {
+                        "_type": "string"
+                      },
+                      "timestamp": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "batteryState": {
+                    "_type": "object",
+                    "charging": {
+                      "_type": "boolean"
+                    },
+                    "currentVoltage": {
+                      "_type": "number"
+                    },
+                    "maxVolt": {
+                      "_type": "number"
+                    },
+                    "minVolt": {
+                      "_type": "number"
+                    },
+                    "percentage": {
+                      "_type": "number"
+                    }
+                  },
+                  "driving": {
+                    "_type": "boolean"
+                  },
+                  "edgeStates": {
+                    "_type": "array"
+                  },
+                  "errors": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "errorLevel": {
+                        "_type": "string"
+                      },
+                      "errorReferences": {
+                        "_type": "array",
+                        "items": {
+                          "_type": "object",
+                          "referenceKey": {
+                            "_type": "string"
+                          },
+                          "referenceValue": {
+                            "_type": "string"
+                          }
+                        }
+                      },
+                      "errorType": {
+                        "_type": "string"
+                      }
+                    }
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "lastCode": {
+                    "_type": "string"
+                  },
+                  "lastNodeId": {
+                    "_type": "string"
+                  },
+                  "lastNodeSequenceId": {
+                    "_type": "number"
+                  },
+                  "load": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "loadId": {
+                        "_type": "null, string"
+                      },
+                      "loadPosition": {
+                        "_type": "string"
+                      },
+                      "loadType": {
+                        "_type": "null, string"
+                      }
+                    }
+                  },
+                  "nodeStates": {
+                    "_type": "array"
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "paused": {
+                    "_type": "boolean"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "waitingForLoadHandling": {
+                    "_type": "boolean"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.616430+00:00",
+              "last_message": "2026-06-10T09:38:29.953657+00:00",
+              "observation_duration_seconds": 6839.337227,
+              "message_interval_seconds": {
+                "minimum": 0.000135,
+                "maximum": 670.676061,
+                "average": 5.999419,
+                "median": 0.16277550000000002
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "order": {
+            "_topic_occurrences": 78,
+            "_topic": "fts/v1/ff/ylK4/order",
+            "_summary": {
+              "message_count": 78,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "edges": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "id": {
+                        "_type": "string"
+                      },
+                      "length": {
+                        "_type": "number"
+                      },
+                      "linkedNodes": {
+                        "_type": "array"
+                      }
+                    }
+                  },
+                  "nodes": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "action": {
+                        "_type": "object",
+                        "id": {
+                          "_type": "string"
+                        },
+                        "metadata": {
+                          "_type": "object",
+                          "charge": {
+                            "_type": "boolean"
+                          },
+                          "direction": {
+                            "_type": "string"
+                          },
+                          "loadId": {
+                            "_type": "string"
+                          },
+                          "loadPosition": {
+                            "_type": "string"
+                          },
+                          "loadType": {
+                            "_type": "string"
+                          }
+                        },
+                        "type": {
+                          "_type": "string"
+                        }
+                      },
+                      "id": {
+                        "_type": "string"
+                      },
+                      "linkedEdges": {
+                        "_type": "array"
+                      }
+                    }
+                  },
+                  "orderId": {
+                    "_type": "string"
+                  },
+                  "orderUpdateId": {
+                    "_type": "number"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.nodes[].action.type",
+              "first_message": "2026-06-10T07:45:15.169097+00:00",
+              "last_message": "2026-06-10T09:07:43.758257+00:00",
+              "observation_duration_seconds": 4948.58916,
+              "message_interval_seconds": {
+                "minimum": 10.995592,
+                "maximum": 2543.658792,
+                "average": 64.267392,
+                "median": 27.812373
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "instantAction": {
+            "_topic_occurrences": 77,
+            "_topic": "fts/v1/ff/ylK4/instantAction",
+            "_summary": {
+              "message_count": 77,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "actions": {
+                    "_type": "array",
+                    "items": {
+                      "_type": "object",
+                      "actionId": {
+                        "_type": "string"
+                      },
+                      "actionType": {
+                        "_type": "string"
+                      },
+                      "metadata": {
+                        "_type": "object",
+                        "loadDropped": {
+                          "_type": "boolean"
+                        },
+                        "loadId": {
+                          "_type": "string"
+                        },
+                        "loadPosition": {
+                          "_type": "string"
+                        },
+                        "loadType": {
+                          "_type": "string"
+                        },
+                        "nodeId": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:33.111888+00:00",
+              "last_message": "2026-06-10T09:07:43.239500+00:00",
+              "observation_duration_seconds": 4990.127612,
+              "message_interval_seconds": {
+                "minimum": 10.865539,
+                "maximum": 2560.197123,
+                "average": 65.659574,
+                "median": 28.228609
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "connection": {
+            "_topic_occurrences": 6,
+            "_topic": "fts/v1/ff/ylK4/connection",
+            "_summary": {
+              "message_count": 6,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "connectionState": {
+                    "_type": "string"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "ip": {
+                    "_type": "string"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "none observed",
+              "first_message": "2026-06-10T07:44:30.614597+00:00",
+              "last_message": "2026-06-10T09:13:49.291442+00:00",
+              "observation_duration_seconds": 5358.676845,
+              "message_interval_seconds": {
+                "minimum": 707.647062,
+                "maximum": 1415.567478,
+                "average": 1071.735369,
+                "median": 1120.968101
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "factsheet": {
+            "_topic_occurrences": 6,
+            "_topic": "fts/v1/ff/ylK4/factsheet",
+            "_summary": {
+              "message_count": 6,
+              "payload_shape": "object",
+              "payload_structure": {
+                "payload": {
+                  "_type": "object",
+                  "agvGeometry": {
+                    "_type": "object"
+                  },
+                  "headerId": {
+                    "_type": "number"
+                  },
+                  "loadSpecification": {
+                    "_type": "object",
+                    "loadPositions": {
+                      "_type": "array"
+                    },
+                    "loadSets": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "loadType": {
+                          "_type": "string"
+                        },
+                        "setName": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "localizationParameters": {
+                    "_type": "object"
+                  },
+                  "manufacturer": {
+                    "_type": "string"
+                  },
+                  "physicalParameters": {
+                    "_type": "object"
+                  },
+                  "protocolFeatures": {
+                    "_type": "object",
+                    "agvActions": {
+                      "_type": "array",
+                      "items": {
+                        "_type": "object",
+                        "actionScopes": {
+                          "_type": "string"
+                        },
+                        "actionType": {
+                          "_type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "protocolLimits": {
+                    "_type": "object"
+                  },
+                  "serialNumber": {
+                    "_type": "string"
+                  },
+                  "timestamp": {
+                    "_type": "string"
+                  },
+                  "typeSpecification": {
+                    "_type": "object",
+                    "agvClass": {
+                      "_type": "string"
+                    },
+                    "navigationTypes": {
+                      "_type": "array"
+                    },
+                    "seriesName": {
+                      "_type": "string"
+                    }
+                  },
+                  "version": {
+                    "_type": "string"
+                  }
+                }
+              },
+              "classification_fields": "payload.typeSpecification.agvClass",
+              "first_message": "2026-06-10T07:44:30.616672+00:00",
+              "last_message": "2026-06-10T09:13:49.291625+00:00",
+              "observation_duration_seconds": 5358.674953,
+              "message_interval_seconds": {
+                "minimum": 707.645386,
+                "maximum": 1415.570431,
+                "average": 1071.734991,
+                "median": 1120.968146
+              },
+              "payload_timestamp_fields": "timestamp"
+            }
+          },
+          "_topic_occurrences": 1308
+        },
+        "_topic_occurrences": 2808
+      },
+      "_topic_occurrences": 2808
+    },
+    "_topic_occurrences": 2808
+  }
+}
