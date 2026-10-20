@@ -1,9 +1,9 @@
 """Convert JSON files to JSON Lines (one JSON value per line).
 
 Examples:
-    python convert_script.py "FT-data-20260612-original\\*.json"
-    python convert_script.py input.json --output output.jsonl
-    python convert_script.py data --output-dir jsonl
+    python event_log_creation\\convert_script.py "default_process\\*.json"
+    python event_log_creation\\convert_script.py input.json --output output.jsonl
+    python event_log_creation\\convert_script.py data --output-dir jsonl
 """
 
 from __future__ import annotations

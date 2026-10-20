@@ -1,8 +1,8 @@
 """Create a graph-friendly structural overview of JSON Lines telemetry files.
 
 Examples:
-    python analyze_jsonl.py "FT-data-20260612-original"
-    python analyze_jsonl.py "FT-data-20260612-original\\*.jsonl" -o overview.json
+    python general_analysis\\analyze_jsonl.py default_process
+    python general_analysis\\analyze_jsonl.py "default_process\\*.jsonl" -o general_analysis\\overview.json
 """
 
 from __future__ import annotations
@@ -238,7 +238,13 @@ def build_topic_tree(summaries: dict[str, dict[str, Any]]) -> dict[str, Any]:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("inputs", nargs="+", type=Path, help="JSONL files, directories, or glob patterns")
-    parser.add_argument("-o", "--output", type=Path, default=Path("jsonl_overview.json"), help="output JSON path")
+    parser.add_argument(
+        "-o",
+        "--output",
+        type=Path,
+        default=Path(__file__).resolve().with_name("jsonl_overview.json"),
+        help="output JSON path",
+    )
     return parser.parse_args()
 
 
