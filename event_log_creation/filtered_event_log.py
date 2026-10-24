@@ -12,19 +12,19 @@ import pandas as pd
 
 
 MODULE_LABELS = {
-    "SVR3QL1089": ("Drill", "Drilling"),
+    "SVR3QL1089": ("DRILL", "Drilling"),
     "SVR4H73901": ("HBW", "HBW"),
-    "SVR4H77011": ("Quality", "Quality"),
-    "SVR4H88474": ("Mill", "Milling"),
-    "SVR4H92774": ("RGB_NFC", "RGB_NFC"),
+    "SVR4H77011": ("AIQS", "Quality_Check"),
+    "SVR4H88474": ("MILL", "Milling"),
+    "SVR4H92774": ("DPS", "DPS"),
 }
 
 LOCATION_LABELS = {
-    "SVR3QL1089": "Drill",
+    "SVR3QL1089": "DRILL",
     "SVR4H73901": "HBW",
-    "SVR4H77011": "Quality",
-    "SVR4H88474": "Mill",
-    "SVR4H92774": "RGB_NFC",
+    "SVR4H77011": "AIQS",
+    "SVR4H88474": "MILL",
+    "SVR4H92774": "DPS",
 }
 
 EVENT_COLUMNS = [
@@ -222,10 +222,17 @@ def build_filtered_event_log(
                     action = action if isinstance(action, dict) else {}
                     command = action.get("command") or _find_value(action, "type")
                     if command:
+                        command_name = str(command).upper()
+                        activity_name = order_label
+                        if serial == "SVR4H73901":
+                            if command_name == "PICK":
+                                activity_name = "HBW_Load_Workpiece"
+                            elif command_name == "DROP":
+                                activity_name = "HBW_Unload_Workpiece"
                         add_event(
                             record,
                             payload,
-                            f"{order_label}_Order_Created",
+                            f"{activity_name}_Order_Created",
                             "ORDERED",
                             resource,
                             action,
@@ -243,17 +250,25 @@ def build_filtered_event_log(
                         state = str(action.get("state", "")).upper()
                         if state != "FINISHED":
                             continue
-                        if command == "PICK":
+                        if serial == "SVR4H73901" and command == "PICK":
+                            activity = "HBW_Load_Workpiece_Process_End"
+                            lifecycle = "COMPLETE"
+                        elif serial == "SVR4H73901" and command == "DROP":
+                            activity = "HBW_Unload_Workpiece_Process_End"
+                            lifecycle = "COMPLETE"
+                        elif command == "PICK":
                             activity = f"{process_label}_Process_Start"
+                            lifecycle = "START"
                         elif command == "DROP":
                             activity = f"{process_label}_Process_End"
+                            lifecycle = "COMPLETE"
                         else:
                             continue
                         add_event(
                             record,
                             payload,
                             activity,
-                            "START" if command == "PICK" else "COMPLETE",
+                            lifecycle,
                             resource,
                             action,
                         )
