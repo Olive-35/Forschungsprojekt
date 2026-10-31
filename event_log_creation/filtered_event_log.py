@@ -12,19 +12,49 @@ import pandas as pd
 
 
 MODULE_LABELS = {
-    "SVR3QL1089": ("DRILL", "Drilling"),
+    "SVR3QL1089": ("drilling station", "Drilling"),
     "SVR4H73901": ("HBW", "HBW"),
-    "SVR4H77011": ("AIQS", "Quality_Check"),
-    "SVR4H88474": ("MILL", "Milling"),
+    "SVR4H77011": ("AIQS", "Quality inspection"),
+    "SVR4H88474": ("milling station", "Milling"),
     "SVR4H92774": ("DPS", "DPS"),
 }
 
 LOCATION_LABELS = {
-    "SVR3QL1089": "DRILL",
+    "SVR3QL1089": "Drill",
+    "DRILL": "Drill",
     "SVR4H73901": "HBW",
     "SVR4H77011": "AIQS",
-    "SVR4H88474": "MILL",
+    "SVR4H88474": "Mill",
+    "MILL": "Mill",
     "SVR4H92774": "DPS",
+}
+
+ORDER_DESCRIPTIONS = {
+    "SVR3QL1089": {
+        "PICK": "receive the workpiece at the drilling station",
+        "DRILL": "drill the workpiece",
+        "DROP": "return the workpiece from the drilling station to the FTS",
+    },
+    "SVR4H73901": {
+        "PICK": "store the workpiece in the HBW",
+        "DROP": "retrieve the workpiece from the HBW",
+    },
+    "SVR4H77011": {
+        "PICK": "receive the workpiece at the quality inspection station",
+        "CHECK_QUALITY": "inspect the workpiece quality",
+        "DROP": "return the workpiece from the quality inspection station to the FTS",
+    },
+    "SVR4H88474": {
+        "PICK": "receive the workpiece at the milling station",
+        "MILL": "mill the workpiece",
+        "DROP": "return the workpiece from the milling station to the FTS",
+    },
+    "SVR4H92774": {
+        "DROP": "introduce a raw workpiece into the factory at the DPS",
+        "PICK": "ship the finished workpiece from the DPS",
+        "INPUT_RGB": "read the workpiece color",
+        "RGB_NFC": "read or write the workpiece NFC data",
+    },
 }
 
 EVENT_COLUMNS = [
@@ -42,6 +72,7 @@ EVENT_COLUMNS = [
     "FTS_Trip_ID",
     "origin",
     "destination",
+    "route",
 ]
 
 
@@ -98,22 +129,6 @@ def _module_serial(topic: str, payload: dict[str, Any]) -> str:
     return _find_value(payload, "serialNumber") or topic.split("/")[-2]
 
 
-def _route_destination(payload: dict[str, Any]) -> str | None:
-    nodes = payload.get("nodes")
-    if not isinstance(nodes, list):
-        return None
-    for node in reversed(nodes):
-        if not isinstance(node, dict):
-            continue
-        action = node.get("action")
-        if isinstance(action, dict) and str(action.get("type", "")).upper() == "DOCK":
-            return str(node["id"]) if node.get("id") is not None else None
-    for node in reversed(nodes):
-        if isinstance(node, dict) and node.get("id") is not None:
-            return str(node["id"])
-    return None
-
-
 def _location_label(location: str | None) -> str:
     if not location:
         return "Unknown"
@@ -121,10 +136,79 @@ def _location_label(location: str | None) -> str:
     return re.sub(r"[^A-Za-z0-9_-]+", "_", label).strip("_") or "Unknown"
 
 
+def _order_activity(serial: str, command: str) -> str:
+    description = ORDER_DESCRIPTIONS.get(serial, {}).get(command)
+    if description is None:
+        module_name = MODULE_LABELS.get(serial, (serial, serial))[0]
+        command_name = command.replace("_", " ").lower()
+        description = f"perform {command_name} at the {module_name}"
+    return f"Order created: {description[0].upper()}{description[1:]}"
+
+
+def _module_completion_activity(
+    serial: str, command: str
+) -> tuple[str, str] | None:
+    if serial == "SVR4H73901":
+        if command == "PICK":
+            return "Workpiece stored in the HBW", "COMPLETE"
+        if command == "DROP":
+            return "Workpiece retrieved from the HBW", "COMPLETE"
+        return None
+
+    if serial == "SVR4H92774":
+        if command == "DROP":
+            return "Raw workpiece delivered to the FTS at the DPS", "COMPLETE"
+        if command == "PICK":
+            return "Finished workpiece shipped from the DPS", "COMPLETE"
+        return None
+
+    process_name = MODULE_LABELS[serial][1]
+    if command == "PICK":
+        return f"{process_name} started", "START"
+    if command == "DROP":
+        return f"{process_name} completed", "COMPLETE"
+    return None
+
+
+def _transport_start_activity(origin: str | None, destination: str | None) -> str:
+    origin_label = _location_label(origin)
+    destination_label = _location_label(destination)
+    return f"Transport departed from {origin_label} to {destination_label}"
+
+
+def _transport_end_activity(origin: str | None, destination: str | None) -> str:
+    origin_label = _location_label(origin)
+    destination_label = _location_label(destination)
+    return f"Transport arrived at {destination_label} from {origin_label}"
+
+
+def _load_objects(payload: dict[str, Any]) -> list[dict[str, Any]]:
+    load = payload.get("load")
+    if isinstance(load, dict):
+        return [load]
+    if isinstance(load, list):
+        return [item for item in load if isinstance(item, dict)]
+    return []
+
+
+def _is_missing(value: Any) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, (list, tuple, dict, set)):
+        return False
+    return bool(pd.isna(value))
+
+
+def _append_route_node(trip: dict[str, Any], location: str | None) -> None:
+    if location and location != trip["last_route_location"]:
+        trip["route"].append(location)
+        trip["last_route_location"] = location
+
+
 def _unique_values(values: Iterable[Any]) -> list[Any]:
     unique: list[Any] = []
     for value in values:
-        normalized = None if value is None or pd.isna(value) else value
+        normalized = None if _is_missing(value) else value
         if normalized not in unique:
             unique.append(normalized)
     return unique
@@ -157,12 +241,11 @@ def build_filtered_event_log(
     case_id: str,
     order_to_workpiece: dict[str, str],
 ) -> pd.DataFrame:
-    """Create normalized module events and per-workpiece FTS trip events."""
+    """Create normalized module events and per-workpiece FTS movement events."""
     events: list[dict[str, Any]] = []
-    fts_routes: dict[str, dict[str, str | None]] = {}
     fts_driving: dict[str, bool] = {}
     fts_last_location: dict[str, str] = {}
-    active_trips: dict[str, dict[str, Any]] = {}
+    active_transports: dict[str, dict[str, Any]] = {}
     trip_number = 0
 
     def add_event(
@@ -177,6 +260,7 @@ def build_filtered_event_log(
         trip_id: str | None = None,
         origin: str | None = None,
         destination: str | None = None,
+        route: list[str] | None = None,
         order_id: str | None = None,
     ) -> None:
         timestamp = _event_time(record, payload, action)
@@ -203,6 +287,7 @@ def build_filtered_event_log(
                 "FTS_Trip_ID": trip_id,
                 "origin": origin,
                 "destination": destination,
+                "route": route,
             }
         )
 
@@ -214,7 +299,6 @@ def build_filtered_event_log(
                 module_labels = MODULE_LABELS.get(serial)
                 if not module_labels:
                     continue
-                order_label, process_label = module_labels
                 resource = serial
 
                 if topic.endswith("/order"):
@@ -223,16 +307,10 @@ def build_filtered_event_log(
                     command = action.get("command") or _find_value(action, "type")
                     if command:
                         command_name = str(command).upper()
-                        activity_name = order_label
-                        if serial == "SVR4H73901":
-                            if command_name == "PICK":
-                                activity_name = "HBW_Load_Workpiece"
-                            elif command_name == "DROP":
-                                activity_name = "HBW_Unload_Workpiece"
                         add_event(
                             record,
                             payload,
-                            f"{activity_name}_Order_Created",
+                            _order_activity(serial, command_name),
                             "ORDERED",
                             resource,
                             action,
@@ -250,20 +328,10 @@ def build_filtered_event_log(
                         state = str(action.get("state", "")).upper()
                         if state != "FINISHED":
                             continue
-                        if serial == "SVR4H73901" and command == "PICK":
-                            activity = "HBW_Load_Workpiece_Process_End"
-                            lifecycle = "COMPLETE"
-                        elif serial == "SVR4H73901" and command == "DROP":
-                            activity = "HBW_Unload_Workpiece_Process_End"
-                            lifecycle = "COMPLETE"
-                        elif command == "PICK":
-                            activity = f"{process_label}_Process_Start"
-                            lifecycle = "START"
-                        elif command == "DROP":
-                            activity = f"{process_label}_Process_End"
-                            lifecycle = "COMPLETE"
-                        else:
+                        completion = _module_completion_activity(serial, command)
+                        if completion is None:
                             continue
+                        activity, lifecycle = completion
                         add_event(
                             record,
                             payload,
@@ -275,12 +343,6 @@ def build_filtered_event_log(
 
             elif topic.startswith("fts/v1/ff/"):
                 resource = _find_value(payload, "serialNumber") or topic.split("/")[-2]
-                if topic.endswith("/order"):
-                    fts_routes[resource] = {
-                        "order_id": _find_value(payload, "orderId"),
-                        "destination": _route_destination(payload),
-                    }
-                    continue
                 if not topic.endswith("/state"):
                     continue
 
@@ -294,45 +356,128 @@ def build_filtered_event_log(
                 was_driving = fts_driving.get(resource, False)
 
                 if driving and not was_driving:
-                    trip_number += 1
-                    route = fts_routes.get(resource, {})
-                    origin = current_location or fts_last_location.get(resource)
-                    load = payload.get("load")
-                    if isinstance(load, dict):
-                        load = [load]
-                    if not isinstance(load, list):
-                        load = []
-                    workpieces = [
-                        item
-                        for item in load
-                        if isinstance(item, dict)
-                        and _find_value(item, "loadId")
-                    ]
-                    active_trips[resource] = {
-                        "trip_id": f"{resource}:{trip_number}",
-                        "origin": origin,
-                        "destination": route.get("destination"),
-                        "order_id": route.get("order_id"),
-                        "workpieces": workpieces,
-                        "start_record": record,
-                        "start_payload": payload,
-                    }
+                    trip = active_transports.get(resource)
+                    if trip is None:
+                        origin = current_location or fts_last_location.get(resource)
+                        workpieces = [
+                            item
+                            for item in _load_objects(payload)
+                            if _find_value(item, "loadId")
+                        ]
+                        if workpieces:
+                            trip_number += 1
+                            route: list[str] = []
+                            trip = {
+                                "trip_id": f"{resource}:{trip_number}",
+                                "origin": origin,
+                                "route": route,
+                                "last_route_location": origin,
+                                "workpieces": workpieces,
+                                "start_events": [],
+                                "start_order_id": _find_value(payload, "orderId"),
+                                "arrival_record": None,
+                                "arrival_payload": None,
+                                "arrival_location": None,
+                            }
+                            active_transports[resource] = trip
+                            for load in workpieces:
+                                event_count = len(events)
+                                add_event(
+                                    record,
+                                    payload,
+                                    _transport_start_activity(origin, None),
+                                    "START",
+                                    resource,
+                                    piece_id=_find_value(load, "loadId"),
+                                    piece_type=_find_value(load, "loadType"),
+                                    trip_id=trip["trip_id"],
+                                    origin=_location_label(origin),
+                                    route=route,
+                                    order_id=trip["start_order_id"],
+                                )
+                                if len(events) > event_count:
+                                    trip["start_events"].append(events[-1])
+                    elif trip is not None:
+                        _append_route_node(trip, current_location)
+                        trip["arrival_record"] = None
+                        trip["arrival_payload"] = None
+                        trip["arrival_location"] = None
 
-                elif not driving and was_driving and resource in active_trips:
-                    trip = active_trips.pop(resource)
-                    destination = trip["destination"] or current_location
-                    trip["end_record"] = record
-                    trip["end_timestamp"] = _event_time(record, payload)
-                    _append_trip_events(events, trip, destination, case_id)
-                    if current_location:
-                        fts_last_location[resource] = current_location
+                elif driving and resource in active_transports:
+                    trip = active_transports[resource]
+                    _append_route_node(trip, current_location)
+
+                elif not driving and resource in active_transports:
+                    trip = active_transports[resource]
+                    if was_driving:
+                        trip["arrival_record"] = record
+                        trip["arrival_payload"] = payload
+                        trip["arrival_location"] = current_location
+                    if payload.get("waitingForLoadHandling") is True:
+                        active_transports.pop(resource)
+                        end_record = trip["arrival_record"] or record
+                        end_payload = trip["arrival_payload"] or payload
+                        destination = trip["arrival_location"] or current_location
+                        if trip["route"] and trip["route"][-1] == destination:
+                            trip["route"].pop()
+                        if (
+                            not trip["route"]
+                            and _location_label(trip["origin"])
+                            == _location_label(destination)
+                        ):
+                            start_event_ids = {
+                                id(event) for event in trip["start_events"]
+                            }
+                            events[:] = [
+                                event
+                                for event in events
+                                if id(event) not in start_event_ids
+                            ]
+                            arrived_ids: set[str] = set()
+                        else:
+                            trip["route"][:] = [
+                                _location_label(node) for node in trip["route"]
+                            ]
+                            arrived_ids = {
+                                _find_value(load, "loadId")
+                                for load in _load_objects(end_payload)
+                                if _find_value(load, "loadId")
+                            }
+                            for start_event in trip["start_events"]:
+                                if start_event["workpiece_id"] in arrived_ids:
+                                    start_event["destination"] = _location_label(
+                                        destination
+                                    )
+                                    start_event["activity"] = _transport_start_activity(
+                                        trip["origin"], destination
+                                    )
+                        for load in trip["workpieces"]:
+                            piece_id = _find_value(load, "loadId")
+                            if piece_id not in arrived_ids:
+                                continue
+                            add_event(
+                                end_record,
+                                end_payload,
+                                _transport_end_activity(trip["origin"], destination),
+                                "COMPLETE",
+                                resource,
+                                piece_id=piece_id,
+                                piece_type=_find_value(load, "loadType"),
+                                trip_id=trip["trip_id"],
+                                origin=_location_label(trip["origin"]),
+                                destination=_location_label(destination),
+                                route=trip["route"],
+                                order_id=(
+                                    trip["start_order_id"]
+                                    or _find_value(payload, "orderId")
+                                ),
+                            )
+                    else:
+                        _append_route_node(trip, current_location)
 
                 if not driving and current_location:
                     fts_last_location[resource] = current_location
                 fts_driving[resource] = driving
-
-    for trip in active_trips.values():
-        _append_trip_events(events, trip, trip["destination"], case_id, include_end=False)
 
     event_log = pd.DataFrame(events, columns=EVENT_COLUMNS)
     if event_log.empty:
@@ -345,61 +490,6 @@ def build_filtered_event_log(
     return event_log.sort_values(
         ["timestamp"], kind="stable", na_position="last"
     ).reset_index(drop=True)
-
-
-def _append_trip_events(
-    events: list[dict[str, Any]],
-    trip: dict[str, Any],
-    destination: str | None,
-    case_id: str,
-    include_end: bool = True,
-) -> None:
-    origin = trip["origin"]
-    activity = (
-        f"Transporting_from_{_location_label(origin)}"
-        f"_to_{_location_label(destination)}"
-    )
-    start_record = trip["start_record"]
-    start_payload = trip["start_payload"]
-    for load in trip["workpieces"]:
-        piece_id = _find_value(load, "loadId")
-        common = {
-            "case_id": case_id,
-            "activity": activity,
-            "resource": _find_value(start_payload, "serialNumber"),
-            "source_topic": start_record["topic"],
-            "order_id": trip["order_id"],
-            "workpiece_id": piece_id,
-            "workpiece_type": _find_value(load, "loadType"),
-            "FTS_Trip_ID": trip["trip_id"],
-            "origin": origin,
-            "destination": destination,
-        }
-        details = json.dumps(
-            {"load": load, "FTS_Trip_ID": trip["trip_id"]},
-            ensure_ascii=False,
-            separators=(",", ":"),
-        )
-        events.append(
-            {
-                **common,
-                "timestamp": _event_time(start_record, start_payload),
-                "lifecycle": "START",
-                "source_line": start_record.get("_source_line"),
-                "details": details,
-            }
-        )
-        if include_end:
-            events.append(
-                {
-                    **common,
-                    "timestamp": trip["end_timestamp"],
-                    "lifecycle": "COMPLETE",
-                    "source_topic": trip["end_record"]["topic"],
-                    "source_line": trip["end_record"].get("_source_line"),
-                    "details": details,
-                }
-            )
 
 
 def export_filtered_xes(event_log: pd.DataFrame, output_path: Path, case_id: str) -> None:
